@@ -1,0 +1,17 @@
+﻿@model OnlneStore.Models.Product
+
+@{
+    ViewBag.Title = Model.ProductName;
+}
+
+<div class="row">
+    <div class="col-lg-9 text-left" style="border-left:1px solid black;">
+        <h2>@Model.ProductName</h2>
+        <p style="white-space: pre-line;"><h4>@Model.ShortDescription</h4></p>
+        <p style="white-space: pre-line;">@Model.FullDescription</p>
+    </div>
+    <div class="col-lg-3 text-left" style="background:rgba(0,0,0,.05); padding:10px; border:1px solid black; height:100px;">
+        <h4>Price: @Model.Price$</h4>
+        <button class="btn btn-primary" onclick="addToCart(@Model.ProductId);" style="width:100%;">Add to cart</button>
+    </div>
+</div>

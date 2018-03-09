@@ -1,0 +1,15 @@
+﻿@model OnlneStore.Models.User
+
+@{
+    ViewBag.Title = "MyDetails";
+}
+
+<h2>My Profile</h2>
+
+<div class="text-left" style="font-size:2em;">
+    <p>Name: @Model.FirstName @Model.LastName</p>
+    <p>Email: <a href="mailto:@Model.Email">@Model.Email</a></p>
+    <p>Address: @Model.Street @Model.HouseNumber, @Model.City, Israel @Model.ZipCode</p>
+    <p>Birthday: @Model.BirthDate.ToShortDateString()</p>
+</div>
+

@@ -1,0 +1,60 @@
+﻿@model OnlneStore.Models.User
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+
+<div class="row">
+    <div class="col-lg-6" id="regDiv">
+        <form method="post" id="RegistrationForm" novalidate>
+            <h4 id="personalDetails">Personal details <small class="text-muted">Required</small></h4>
+            <div class="form-group">
+                <label for="txtFirstName">First Name</label>
+                <input type="text" class="form-control" id="txtFirstName" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label for="txtLastName">Last Name</label>
+                <input type="text" class="form-control" id="txtLastName" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="txtBirthDate">Birth Date</label>
+                <input type="date" class="form-control" id="txtBirthDate" placeholder="Birth Date">
+
+            </div>
+            <div class="form-group">
+                <label for="txtEmail">Email address</label>
+                <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">You will use this email address to login the website.</small>
+            </div>
+            <div class="form-group">
+                <label for="txtPassword">Password</label>
+                <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+                <small id="passwordHelpInline" class="text-muted">
+                    Must be 8-20 characters long.
+                </small>
+            </div>
+            <h4>Address <small class="text-muted">Not Required</small></h4>
+            <div class="form-group">
+                <label for="txtCity">City</label>
+                <input type="text" class="form-control" id="txtCity" placeholder="City">
+            </div>
+            <div class="form-group">
+                <label for="txtStreet">Street</label>
+                <input type="text" class="form-control" id="txtStreet" placeholder="Street">
+            </div>
+            <div class="form-group">
+                <label for="txtHouseNumber">House Number</label>
+                <input type="text" class="form-control" id="txtHouseNumber" placeholder="House Number">
+            </div>
+            <div class="form-group">
+                <label for="txtZipCode">Zip Code</label>
+                <input type="text" class="form-control" id="txtZipCode" placeholder="Zip Code">
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary" id="btnSubmit">Submit</button>
+            </div>
+        </form>
+        <div id="Message" style="display:none;" class="alert alert-danger" role="alert">The marked fields are required or incorrect</div>
+    </div>
+</div>

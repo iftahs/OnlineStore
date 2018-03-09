@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories</h2>
+
+<div class="row">
+    <div class="col-lg-6" id="addCategoryDiv">
+        <h4>Add Category</h4>
+        <form id="frmAddCategory" method="post">
+            <div class="form-group">
+                <label for="txtCatName">Category name</label>
+                <input type="text" class="form-control" id="txtCatName" placeholder="Category name">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+</div>
+
+<table style="width:100%" id="tblCategories"></table>

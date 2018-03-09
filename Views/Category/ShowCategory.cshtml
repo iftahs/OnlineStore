@@ -1,0 +1,38 @@
+﻿@model OnlneStore.ViewModels.CategoryView
+@using OnlneStore.Models
+
+@{
+    ViewBag.Title = "ShowCategory";
+}
+
+<h2>@Model.category.CatName</h2>
+
+@if (Model.products.Count == 0)
+{
+    <div>
+        <h1>
+            There is no products in this category
+        </h1>
+    </div>
+}
+
+<div class="row">
+    @foreach (Product prod in Model.products)
+    {
+        <div class="col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body" style="text-align:left;">
+                    <h5 class="card-title">@prod.ProductName</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@prod.Price<span>$</span></h6>
+                    <p class="card-text" style="white-space: pre-line; margin-bottom:30px;">@prod.ShortDescription</p>
+                    <span style="position:absolute; bottom: 6px;">
+                        <a href="/Product/ShowProduct/@prod.ProductId" class="btn btn-info">View Details</a>
+                        <button class="btn btn-primary" onclick="addToCart(@prod.ProductId);">Add to cart</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+     }
+</div>
+
+

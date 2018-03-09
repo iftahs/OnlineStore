@@ -1,0 +1,79 @@
+﻿body {
+    padding: 0px;
+}
+
+footer {
+    background-color: #eafff7;
+    text-align: center;
+    width: 100%;
+    margin-top:15px;
+}
+
+.myHeader {
+    background-image: url("../Images/iphone_tab_cotter_large_2x.jpg");
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+
+}
+
+#user{
+    color:white;
+    text-align:center;
+}
+
+#user a {
+    color: #365899;
+}
+
+#loginDiv {
+    height: 357px;
+    margin: auto;
+    text-align: left;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+#regDiv {
+    margin: auto;
+    text-align: left;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+#addProductDiv {
+    margin: auto;
+    text-align: left;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+#addCategoryDiv {
+    margin: auto;
+    text-align: center;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+.NotValid{
+    background: #ffc5c5;
+}
+
+.valid{
+    background: #d8ffc9;
+}
+
+#tblCategories{
+    width: 100%;
+
+}
+
+#tblCategories tr td{
+    text-align:center;
+    font-size:2em;
+    height:100px;
+}
+
+#tblShoppingCart tr td,th{
+    text-align:left;
+}

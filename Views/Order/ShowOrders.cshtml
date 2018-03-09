@@ -1,0 +1,22 @@
+﻿@model OnlneStore.ViewModels.OrdersView
+@using OnlneStore.Models
+@using OnlneStore.ViewModels
+
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h2>My Orders</h2>
+
+<div>
+    @{ 
+        WebGrid grid = new WebGrid(Model.Orders, canSort: false);
+    }
+
+    @grid.GetHtml(tableStyle: "table text-left", columns: grid.Columns(
+        grid.Column("OrderId", "Order Number"),
+        grid.Column("OrderDate", "Order date and time"),
+        grid.Column("Amount", "Amount of products"),
+        grid.Column("TotalPrice", "Total price")
+    ))
+</div>

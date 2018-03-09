@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "ShoppingCart";
+}
+
+<h2>My Shopping Cart</h2>
+
+<div class="row">
+    <div class="col-9">
+        <table class="table table-striped" id="tblShoppingCart">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="col-3 text-left" style="background:rgba(0,0,0,.05); padding:10px; border:1px solid black; height:200px;">
+        <h4>
+            Total: <span id="totalPrice">0</span>$<br />
+            Amount: <span id="productAmount">0</span>
+        </h4>
+        <button class="btn btn-primary" style="width:100%;" onclick="finishOrder();" id="btnPlaceOrder">Confirm and pay</button><br /><br />
+        <button class="btn btn-danger" style="width:100%;" onclick="emptyCart();" id="btnEmptyCart">Empty cart</button>
+    </div>
+</div>
